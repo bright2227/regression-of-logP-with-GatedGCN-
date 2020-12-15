@@ -66,7 +66,7 @@ class GatedGCN(Layer):
 
 ![image](img/logP.png)
 
-各原子特徵使用原子種類、周圍氫原子數、有無在aromatic ring上、Hydrogen bond number。
+從ZINC.smiles取出個原子的smile式，再透過RDkit萃取每個化合物上所有的feature，各原子特徵使用原子種類、周圍氫原子數、有無在aromatic ring上、Hydrogen bond number。
 
 ```
 def atom_feature(atom):
