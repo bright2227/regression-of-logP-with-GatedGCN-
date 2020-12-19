@@ -27,7 +27,7 @@ X = array([[ H3C- feature],
 # 使用矩陣乘法，結合特徵矩陣和相鄰矩陣
 A X = array([[-CH2- feature              ],
              [ H3C- feature + -OH feature], 
-             [ -OH  feature              ],)
+             [-CH2- feature              ],)
 ```
 
 相鄰矩陣可以得到周圍連結頂點的資訊，例如使用矩陣乘法，結合特徵矩陣和相鄰矩陣，即可得到所有相鄰頂點的和。
