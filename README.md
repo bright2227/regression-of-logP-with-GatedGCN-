@@ -62,7 +62,7 @@ class GatedGCN(Layer):
 
 ## Data Processing
 
-先確認logP的範圍，其範圍變化不算高，直接採用為預測值。
+取出10萬個化合物作訓練，先確認logP的範圍，其範圍變化不算高，直接採用為預測值。
 
 ![image](img/logP.png)
 
@@ -82,7 +82,7 @@ def atom_feature(atom):
 
 ## Training and Testing
 
-經過50 epochs訓練，訓練集MSE為0.013，測試集MSE可達0.009，代表模型預測良好。
+經過50 epochs訓練，訓練集MSE為0.013，測試集MSE可達0.009，未出現overfitting。以模型預測的logP為點座標y，真實的logP點座標x，作圖可發現絕大多數的點都在對角線上，少數幾個點有較大的偏差，代表模型預測絕大多數的情形下表現良好。
 
 ```
 # 訓練集和驗證集
@@ -97,6 +97,7 @@ Epoch:49   Loss:0.013   val_Loss:0.008
 test_Loss:0.009
 ```
 
+![image](img/result.png)
 
 
 
